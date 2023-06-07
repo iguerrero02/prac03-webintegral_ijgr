@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+html, body {height: 100%;}
+body {
+margin: 0;
+font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.error-snackbar {
+background-color: darkmagenta;
+color: white;
+}
+.success-snackbar {
+background-color: darkcyan;
+color: white;
+}
+.full-width {
+width: 100%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

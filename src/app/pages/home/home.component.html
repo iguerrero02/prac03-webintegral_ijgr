@@ -1,0 +1,85 @@
+<ul class="menu">
+  <li><a (click)="scrollTo('#inicio')" class="menu-link">Inicio</a></li>
+  <li><a (click)="scrollTo('#servicio')"class="menu-link">Servicios</a></li>
+  <li><a (click)="scrollTo('#nosotros')" class="menu-link">Sobre nosotros</a></li>
+  <li><a (click)="scrollTo('#testimonios')" class="menu-link">Testimonios</a></li>
+  <li><a (click)="scrollTo('#contacto')" class="menu-link">Contacto</a></li>
+</ul>
+
+<div class="logout-button">
+  <button (click)="logout()">Cerrar sesión</button>
+</div>
+
+
+<div class="home">
+  <h1 id="inicio">Bienvenido Dental Plus</h1>
+
+  <div class="services">
+    <h2 id="servicio">Servicios ofrecidos:</h2>
+    <ul class="service-list">
+      <li *ngFor="let servicio of servicios">
+        <div class="service">
+          <img [src]="servicio.imagen" [alt]="servicio.nombre" class="service-img">
+          <h3 class="service-title">{{ servicio.nombre }}</h3>
+          <p class="service-description">{{ servicio.descripcion }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+  <div class="about">
+    <h2 id="nosotros">Sobre nosotros</h2>
+    <p>Somos un equipo de dentistas altamente capacitados y comprometidos con la salud bucal de nuestros pacientes. Brindamos servicios de calidad utilizando las últimas tecnologías en el campo de la odontología.</p>
+
+    <div class="team">
+      <div class="team-member">
+        <img src="assets/ruta-imagen-1.jpg" alt="Miembro del equipo 1">
+        <h3>Dr. Juan Pérez</h3>
+        <p>Especialista en ortodoncia</p>
+      </div>
+
+      <div class="team-member">
+        <img src="assets/ruta-imagen-2.jpg" alt="Miembro del equipo 2">
+        <h3>Dra. Ana Gómez</h3>
+        <p>Especialista en periodoncia</p>
+      </div>
+
+      <div class="team-member">
+        <img src="assets/ruta-imagen-3.jpg" alt="Miembro del equipo 3">
+        <h3>Dr. Roberto López</h3>
+        <p>Especialista en endodoncia</p>
+      </div>
+
+      <!-- Agrega más miembros del equipo según sea necesario -->
+    </div>
+  </div>
+</div>
+<br>
+  <div class="testimonials">
+    <h2 id="testimonios">Testimonios de nuestros pacientes</h2>
+    <div class="testimonial">
+      <img src="assets/testimonial1.jpg" alt="Testimonial">
+      <p>"El equipo de dentistas aquí es increíble. Siempre me hacen sentir cómodo y me explican cada paso del tratamiento. ¡Recomiendo este lugar a todos!"</p>
+      <p class="author">- Sara Pérez</p>
+    </div>
+    <div class="testimonial">
+      <img src="assets/testimonial2.jpg" alt="Testimonial">
+      <p>"Excelente atención y servicio. Los resultados de mi tratamiento dental superaron mis expectativas. ¡Gracias por mi nueva sonrisa!"</p>
+      <p class="author">- María Gómez</p>
+    </div>
+  </div>
+  <button (click)="scrollToTop()" class="scroll-top-btn">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+
+  <div class="contact">
+    <h2 id="contacto">¡Pide una cita hoy mismo!</h2>
+    <p>Puedes contactarnos a través de:</p>
+    <ul>
+      <li>Teléfono: <a href="tel:+123456789">123-456-789</a></li>
+      <li>Email: <a href="mailto:info@dentista.com">info@dentalPlus.com</a></li>
+    </ul>
+  </div>
+</div>
