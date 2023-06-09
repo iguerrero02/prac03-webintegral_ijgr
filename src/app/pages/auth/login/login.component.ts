@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { BaseForm } from '../../../shared/utils/base-form';
 import { Router } from '@angular/router';
 import {ReCaptchaV3Service} from 'ng-recaptcha';
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     // password: ['', [Validators.required,Validators.minLength(3)]],
  // });
 
-  constructor(private fb: FormBuilder, public baseForm: BaseForm, private router: Router, private reCaptchaV3Service: ReCaptchaV3Service) { }
+  constructor(private fb: UntypedFormBuilder, public baseForm: BaseForm, private router: Router, private reCaptchaV3Service: ReCaptchaV3Service) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
