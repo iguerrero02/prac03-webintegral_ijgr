@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
 this.reCaptchaV3Service.execute('importantAction').subscribe((token: string)=> {
   this.tokenVisible = true;
   this.reCAPTCHAToken = `Token [${token}] generated`;
+  
 });
 
 
